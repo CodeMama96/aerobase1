@@ -3,6 +3,7 @@ import SearchBar from './components/SearchBar'
 
 import PartsContainer from './components/PartsContainer';
 
+
 import {
   BrowserRouter as Router,
   Route
@@ -16,9 +17,11 @@ import About from './About'
 function App() {
     return (
         <div className="App">
+
           <Router>
               <header className="App-header">
                   <h1><i>Hay! Open for Business</i></h1>
+                
                     <SearchBar/>
                     <PartsContainer/>
 

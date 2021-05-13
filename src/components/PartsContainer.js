@@ -5,7 +5,7 @@ class PartsContainer extends Component{
     render(){
         return(
             <div>
-                <li><Part/></li>
+                <script><Part/></script>
             </div>
         )
     }
