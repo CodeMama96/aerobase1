@@ -1,15 +1,32 @@
+import './App.css'
 import SearchBar from './components/SearchBar'
 
 import PartsContainer from './components/PartsContainer';
 
+import {
+  BrowserRouter as Router,
+  Route
+} from "react-router-dom";
+
+
+import About from './About'
+
+
+
 function App() {
     return (
         <div className="App">
-            <header className="App-header">
-                Yay! Open for Business
-                  <SearchBar/>
-                  <PartsContainer/>
-            </header>
+          <Router>
+              <header className="App-header">
+                  <h1><i>Hay! Open for Business</i></h1>
+                    <SearchBar/>
+                    <PartsContainer/>
+
+                    <Route exact path='/about' component={About}></Route>
+                          
+
+              </header>
+            </Router>
         </div>
     );
 }
