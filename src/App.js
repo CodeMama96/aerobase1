@@ -3,7 +3,7 @@ import SearchBar from './components/SearchBar'
 
 import PartsContainer from './components/PartsContainer';
 
-
+import PartList from './containers/PartList'
 
 
 
@@ -17,6 +17,8 @@ function App() {
                 
                     <SearchBar/>
                     <PartsContainer/>
+
+                    <PartList/>
 
                    
               </header>

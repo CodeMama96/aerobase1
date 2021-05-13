@@ -6,8 +6,8 @@ export const fetchParts = () => {
         .then(response => {
             return response.json()
         }).then(responseJSON => {
-            console.log( 'Im a part fetch')
-            dispatch({ type: 'ADD_PARTS', parts: responseJSON}) 
+            console.log( 'Im a part fetch', responseJSON)
+            dispatch({parts: responseJSON}) 
         })
     }
 }

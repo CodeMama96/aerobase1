@@ -6,10 +6,12 @@
 
 const Part = props =>{
     return(
-        <div className="each-part" >
-            <p>nsn</p>
-            <p>nsn_flis_parts</p>
-            <p>nsn_characteristics </p>
+        <div className="part" >
+            name={props.name}
+                    niin={props.niin}
+                    inc={props.inc}
+                    fsc={props.fsc}
+                    publication_date={props.publication_date}
         </div>
     )
 }
