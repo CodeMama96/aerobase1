@@ -17,7 +17,11 @@ class SearchBar extends Component{
                 </script>
 
 
-                <link rel="stylesheet" type="text/javascript" href="http://194.195.210.84/"></link>
+                <link rel="stylesheet" type="text/javascript" href="http://194.195.210.84/var/www/html/index.php"></link>
+
+
+                <a href="./FetchParts.php?name=<? print $_GET['name'] ?>">Click Me</a>
+
                     <input type="text" id="userInput" placeholder="I'm a search bar" title="Type Part Number" onChange={searchFunction} />
                         <ul id="byName">
                             <li><button>CK FILTER ASSEMBLY</button></li>

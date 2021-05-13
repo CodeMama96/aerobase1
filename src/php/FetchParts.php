@@ -1,4 +1,6 @@
-
+<!DOCTYPE html>
+<html>
+<body>
 <?php
         $servername = "localhost";
         $username = "root";
@@ -26,3 +28,6 @@
 
         mysqli_close($conn);
 ?>
+
+</body>
+</html>
