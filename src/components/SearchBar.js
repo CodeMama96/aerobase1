@@ -3,12 +3,25 @@ import React, {Component} from 'react';
 
 
 class SearchBar extends Component{
+
+    state = {
+        parts: [],
+        partNumber: ''
+    }
+
+    searchFunction = (e) => {
+        const name = e.target.name
+        const value = e.target.value
+
+        this.setState({
+            [name]: value
+        }, () => console.log(this.state)
+        )
+        console.log("Hello World!")
+    }
+
     render(){
-
-
-        const searchFunction = () => {
-            console.log("Hello World!")
-        }
+       
 
         return(
             <div>
@@ -22,7 +35,7 @@ class SearchBar extends Component{
 
                 <a href="./FetchParts.php?name=<? print $_GET['name'] ?>">Click Me</a>
 
-                    <input type="text" id="userInput" placeholder="I'm a search bar" title="Type Part Number" onChange={searchFunction} />
+                    <input type="text" id="userInput" placeholder="I'm a search bar" value={this.state.partNumber} name="partNumber"  onChange={this.searchFunction} />
                         <ul id="byName">
                             <li><button>CK FILTER ASSEMBLY</button></li>
                             <li><button>TERMINAL BOARD ASSEMBLY</button></li>

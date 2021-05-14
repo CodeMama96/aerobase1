@@ -5,9 +5,21 @@ import PartsContainer from './components/PartsContainer';
 
 import PartList from './containers/PartList'
 
+import {fetchParts} from './actions/partActions'
+import { Component } from 'react';
+import { connect } from 'react-redux';
 
+class App extends Component {
 
-function App() {
+  state = {
+    search: ""
+  }
+
+  componentDidMount(){
+    this.props.fetchParts()
+  }
+
+  render (){
     return (
         <div className="App">
 
@@ -25,9 +37,16 @@ function App() {
           
         </div>
     );
+  }
 }
 
-export default App;
+const mapDispatchToProps = dispatch => {
+  return {
+    fetchParts: () => dispatch(fetchParts())
+  }
+}
+
+export default connect(null, mapDispatchToProps)(App);
 
 
 //Components
