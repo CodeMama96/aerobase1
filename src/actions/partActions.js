@@ -2,13 +2,25 @@ export const fetchParts = () => {
     
     return () => {
         // dispatch({type: 'FETCHING_PARTS'})
-        fetch('http://194.195.210.84')///var/www/html/index.php
-        .then(response => {
-            return response.json()
-        }).then(responseJSON => {
-            console.log( 'Im a part fetch', responseJSON)
-            // dispatch({parts: responseJSON}) 
-        })
+            let url = 'http://localhost:3000/'
+        fetch(url).then(async response => {
+            try {
+             const data = await response.json()
+             console.log('response data?', data)
+           } catch(error) {
+             console.log('Error happened here!')
+             console.error(error)
+           }
+          })
+        // fetch('http://localhost:3000/')
+        
+        // ///var/www/html/index.php
+        // .then(response => {
+        //     return response.json()
+        // }).then(responseJSON => {
+        //     console.log( 'Im a part fetch', responseJSON)
+        //     // dispatch({parts: responseJSON}) 
+        // })
     }
 }
 
