@@ -6,7 +6,7 @@ class SearchBar extends Component{
 
     state = {
         parts: [],
-        partNumber: ''
+        search: ''
     }
 
     searchFunction = (e) => {
@@ -19,9 +19,27 @@ class SearchBar extends Component{
         )
         console.log("Hello World!")
     }
+    
+   search_part = () => {
+        let input = document.getElementById('userInput').value
+        input = input.toLowerCase();
+        let x = document.getElementsByClassName('partName');
+
+         
+        for (i = 0; i < x.length; i++) { 
+            if (!x[i].innerHTML.toLowerCase().includes(input)) {
+                x[i].style.display="none";
+            }
+            else {
+                x[i].style.display="list-item";                 
+            }
+        }
+}
+   
 
     render(){
        
+
 
         return(
             <div>
@@ -34,20 +52,22 @@ class SearchBar extends Component{
 
 
                 <a href="./FetchParts.php?name=<? print $_GET['name'] ?>">Click Me</a>
+                    <body>
+                        <input type="text" id="userInput" placeholder="I'm a search bar" value={this.state.partNumber} name="search"  onChange={this.searchFunction} onKeyUp="search_part()"/>
+                            <ul id="byName">
+                                <li class="partName"><button>CK FILTER ASSEMBLY</button></li>
+                                <li class="partName"><button>TERMINAL BOARD ASSEMBLY</button></li>
 
-                    <input type="text" id="userInput" placeholder="I'm a search bar" value={this.state.partNumber} name="partNumber"  onChange={this.searchFunction} />
-                        <ul id="byName">
-                            <li><button>CK FILTER ASSEMBLY</button></li>
-                            <li><button>TERMINAL BOARD ASSEMBLY</button></li>
+                                <li class="partName"><button>MODIFICATION KIT,AIRFRAME</button></li>
+                                <li class="partName"><button>ENGINE,AIRCRAFT,TURBO-SHAFT</button></li>
 
-                            <li><button>MODIFICATION KIT,AIRFRAME</button></li>
-                            <li><button>ENGINE,AIRCRAFT,TURBO-SHAFT</button></li>
+                                <li class="partName"><button>MODIFICATION KIT,ENGINE</button></li>
+                                <li class="partName"><button>COMPRESSOR UNIT,RECIPROCATING</button></li>
+                                <li class="partName"><button>ELECTRON TUBE</button></li>
+                            </ul>
 
-                            <li><button>MODIFICATION KIT,ENGINE</button></li>
-                            <li><button>COMPRESSOR UNIT,RECIPROCATING</button></li>
-                            <li><button>ELECTRON TUBE</button></li>
-                        </ul>
-
+                            <script></script>
+                    </body>
                 </form>
             </div>
         )
@@ -55,5 +75,8 @@ class SearchBar extends Component{
 }
 
 
+//as user searches, the names will show up, the user then can click on it
+// and it will go to the parts description
+//Goal: have search bar work
 
 export default SearchBar

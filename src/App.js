@@ -9,6 +9,8 @@ import {fetchParts} from './actions/partActions'
 import { Component } from 'react';
 import { connect } from 'react-redux';
 
+import Search from './components/Search'
+
 class App extends Component {
 
   state = {
@@ -26,7 +28,7 @@ class App extends Component {
          
               <header className="App-header">
                   <h1><i>Hay! Open for Business</i></h1>
-                
+                    <Search/>
                     <SearchBar/>
                     <PartsContainer/>
 
