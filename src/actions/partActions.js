@@ -1,26 +1,26 @@
 export const fetchParts = () => {
     
-    return () => {
-        // dispatch({type: 'FETCHING_PARTS'})
-            let url = 'http://localhost:3000/'
-        fetch(url).then(async response => {
-            try {
-             const data = await response.json()
-             console.log('response data?', data)
-           } catch(error) {
-             console.log('Error happened here!')
-             console.error(error)
-           }
-          })
-        // fetch('http://localhost:3000/')
+    return (dispatch) => {
+        dispatch({type: 'FETCHING_PARTS'})
+        //     let url = 'http://localhost:3000/parts'
+        // fetch(url).then(async response => {
+        //     try {
+        //      const data = await response.json()
+        //      console.log('response data?', data)
+        //    } catch(error) {
+        //      console.log('Error happened here!')
+        //      console.error(error)
+        //    }
+        //   })
+        fetch('http://localhost:3000/parts')
         
-        // ///var/www/html/index.php
-        // .then(response => {
-        //     return response.json()
-        // }).then(responseJSON => {
-        //     console.log( 'Im a part fetch', responseJSON)
-        //     // dispatch({parts: responseJSON}) 
-        // })
+        ///var/www/html/index.php
+        .then(response => {
+            return response.json()
+        }).then(responseJSON => {
+            console.log( 'Im a part fetch', responseJSON)
+            dispatch({type: 'FETCHING_PARTS', parts: responseJSON}) 
+        })
     }
 }
 

@@ -1,8 +1,9 @@
 const partsReducer = (state = {parts: []}, action) => {
     switch(action.type){
-        case "ADD_PARTS":
-            return{...state,
-                parts:[...state.parts]
+        case "FETCHING_PARTS":
+            return{
+                ...state,
+                parts: action.parts
             }
             default:
                 return state;

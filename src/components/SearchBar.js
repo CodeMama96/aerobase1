@@ -20,21 +20,21 @@ class SearchBar extends Component{
         console.log("Hello World!")
     }
     
-   search_part = () => {
-        let input = document.getElementById('userInput').value
-        input = input.toLowerCase();
-        let x = document.getElementsByClassName('partName');
+//    search_part = () => {
+//         let input = document.getElementById('userInput').value
+//         input = input.toLowerCase();
+//         let x = document.getElementsByClassName('partName');
 
          
-        for (i = 0; i < x.length; i++) { 
-            if (!x[i].innerHTML.toLowerCase().includes(input)) {
-                x[i].style.display="none";
-            }
-            else {
-                x[i].style.display="list-item";                 
-            }
-        }
-}
+//         for (i = 0; i < x.length; i++) { 
+//             if (!x[i].innerHTML.toLowerCase().includes(input)) {
+//                 x[i].style.display="none";
+//             }
+//             else {
+//                 x[i].style.display="list-item";                 
+//             }
+//         }
+// }
    
 
     render(){
@@ -53,7 +53,7 @@ class SearchBar extends Component{
 
                 <a href="./FetchParts.php?name=<? print $_GET['name'] ?>">Click Me</a>
                     <body>
-                        <input type="text" id="userInput" placeholder="I'm a search bar" value={this.state.partNumber} name="search"  onChange={this.searchFunction} onKeyUp="search_part()"/>
+                        <input type="text" id="userInput" placeholder="I'm a search bar" value={this.state.partNumber} name="search"  onChange={this.searchFunction}/>
                             <ul id="byName">
                                 <li class="partName"><button>CK FILTER ASSEMBLY</button></li>
                                 <li class="partName"><button>TERMINAL BOARD ASSEMBLY</button></li>

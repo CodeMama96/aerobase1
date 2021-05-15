@@ -1,7 +1,7 @@
 import './App.css'
 import SearchBar from './components/SearchBar'
 
-import PartsContainer from './components/PartsContainer';
+
 
 import PartList from './containers/PartList'
 
@@ -9,7 +9,7 @@ import {fetchParts} from './actions/partActions'
 import { Component } from 'react';
 import { connect } from 'react-redux';
 
-import Search from './components/Search'
+
 
 class App extends Component {
 
@@ -24,17 +24,11 @@ class App extends Component {
   render (){
     return (
         <div className="App">
-
-         
               <header className="App-header">
                   <h1><i>Hay! Open for Business</i></h1>
-                    <Search/>
                     <SearchBar/>
-                    <PartsContainer/>
-
+                    
                     <PartList/>
-
-                   
               </header>
           
         </div>

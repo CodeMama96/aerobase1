@@ -8,11 +8,11 @@ const Part = props =>{
    
     return(
         <div className="part" >
-            {/* name={props.name}
+            name={props.name}
                     niin={props.niin}
                     inc={props.inc}
                     fsc={props.fsc}
-                    publication_date={props.publication_date} */}
+                    publication_date={props.publication_date}
         </div>
     )
 }
