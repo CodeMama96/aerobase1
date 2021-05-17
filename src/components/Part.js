@@ -17,5 +17,7 @@ const Part = props =>{
     )
 }
 
+//data is not being passed down??
+
 
 export default Part

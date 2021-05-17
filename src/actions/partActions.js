@@ -3,7 +3,7 @@ const url = 'http://localhost:3000/parts'
 export const fetchParts = () => {
 
     return (dispatch) => {
-        dispatch({type: 'FETCHING_PARTS'})
+        // dispatch({type: 'FETCHING_PARTS'})
         fetch(url)
         .then(response => {
             return response.json()

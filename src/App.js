@@ -42,13 +42,14 @@ const mapDispatchToProps = dispatch => {
   }
 }
 
-// const mapStateToProps = state => {
-//   return{
-//     parts: state.partsReducer.parts
-//   }
-// }
+const mapStateToProps = state => {
 
-export default connect(null, mapDispatchToProps)(App);
+  return{
+    parts: state.parts
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(App);
 
 
 //Components
