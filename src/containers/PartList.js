@@ -1,16 +1,13 @@
 import React, {Component} from 'react';
 import Part from "../components/Part";
 
-// import {fetchParts} from '../actions/partActions'
-
 
 class PartList extends Component{
 
 
     renderPartList(){
-
-    // return console.log("PartList Container")
-        let displayedParts = this.props.parts 
+    return console.log("PartList Container")
+        let displayedParts = this.state.parts 
             return displayedParts.map( part =>
                 <Part
                     name={part.name}

@@ -52,22 +52,22 @@ class SearchBar extends Component{
 
 
                 <a href="./FetchParts.php?name=<? print $_GET['name'] ?>">Click Me</a>
-                    <body>
+                    <>
                         <input type="text" id="userInput" placeholder="I'm a search bar" value={this.state.partNumber} name="search"  onChange={this.searchFunction}/>
                             <ul id="byName">
-                                <li class="partName"><button>CK FILTER ASSEMBLY</button></li>
-                                <li class="partName"><button>TERMINAL BOARD ASSEMBLY</button></li>
+                                <li className="partName"><button>CK FILTER ASSEMBLY</button></li>
+                                <li className="partName"><button>TERMINAL BOARD ASSEMBLY</button></li>
 
-                                <li class="partName"><button>MODIFICATION KIT,AIRFRAME</button></li>
-                                <li class="partName"><button>ENGINE,AIRCRAFT,TURBO-SHAFT</button></li>
+                                <li className="partName"><button>MODIFICATION KIT,AIRFRAME</button></li>
+                                <li className="partName"><button>ENGINE,AIRCRAFT,TURBO-SHAFT</button></li>
 
-                                <li class="partName"><button>MODIFICATION KIT,ENGINE</button></li>
-                                <li class="partName"><button>COMPRESSOR UNIT,RECIPROCATING</button></li>
-                                <li class="partName"><button>ELECTRON TUBE</button></li>
+                                <li className="partName"><button>MODIFICATION KIT,ENGINE</button></li>
+                                <li className="partName"><button>COMPRESSOR UNIT,RECIPROCATING</button></li>
+                                <li className="partName"><button>ELECTRON TUBE</button></li>
                             </ul>
 
                             <script></script>
-                    </body>
+                    </>
                 </form>
             </div>
         )
