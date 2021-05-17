@@ -1,6 +1,7 @@
 export const fetchParts = () => {
-    
+   
     return (dispatch) => {
+       
         dispatch({type: 'FETCHING_PARTS'})
         //     let url = 'http://localhost:3000/parts'
         // fetch(url).then(async response => {

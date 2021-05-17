@@ -3,7 +3,7 @@ const partsReducer = (state = {parts: []}, action) => {
         case "FETCHING_PARTS":
             return{
                 ...state,
-                parts: action.parts
+                parts:[...state.parts]
             }
             default:
                 return state;
