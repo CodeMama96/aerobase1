@@ -28,7 +28,7 @@ class App extends Component {
                   <h1><i>Hay! Open for Business</i></h1>
                     <SearchBar/>
                     
-                    <PartList/>
+                    <PartList parts={this.props.parts}/>
               </header>
           
         </div>
@@ -41,6 +41,12 @@ const mapDispatchToProps = dispatch => {
     fetchParts: () => dispatch(fetchParts())
   }
 }
+
+// const mapStateToProps = state => {
+//   return{
+//     parts: state.partsReducer.parts
+//   }
+// }
 
 export default connect(null, mapDispatchToProps)(App);
 

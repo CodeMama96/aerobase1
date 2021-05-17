@@ -1,21 +1,10 @@
+const url = 'http://localhost:3000/parts'
+
 export const fetchParts = () => {
-   
+
     return (dispatch) => {
-       
         dispatch({type: 'FETCHING_PARTS'})
-        //     let url = 'http://localhost:3000/parts'
-        // fetch(url).then(async response => {
-        //     try {
-        //      const data = await response.json()
-        //      console.log('response data?', data)
-        //    } catch(error) {
-        //      console.log('Error happened here!')
-        //      console.error(error)
-        //    }
-        //   })
-        fetch('http://localhost:3000/parts')
-        
-        ///var/www/html/index.php
+        fetch(url)
         .then(response => {
             return response.json()
         }).then(responseJSON => {

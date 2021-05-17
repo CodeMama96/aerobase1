@@ -6,7 +6,6 @@ class PartList extends Component{
 
 
     renderPartList(){
-
         let displayedParts = this.state.parts 
             return displayedParts.map( part =>
                 <Part
@@ -21,7 +20,7 @@ class PartList extends Component{
     render(){
         return(
             <div className="part-container">
-                {this.renderPartList()}
+                 {this.renderPartList()}
             </div>
         )
     }
