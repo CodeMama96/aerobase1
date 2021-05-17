@@ -6,7 +6,7 @@ class PartList extends Component{
 
 
     renderPartList(){
-    return console.log("PartList Container")
+
         let displayedParts = this.state.parts 
             return displayedParts.map( part =>
                 <Part
