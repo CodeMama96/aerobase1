@@ -1,15 +1,14 @@
 const url = 'http://localhost:3000/parts'
 
 export const fetchParts = () => {
-
+    
     return (dispatch) => {
-        // dispatch({type: 'FETCHING_PARTS'})
         fetch(url)
         .then(response => {
             return response.json()
         }).then(responseJSON => {
-            console.log( 'Im a part fetch', responseJSON)
-            dispatch({type: 'FETCHING_PARTS', parts: responseJSON}) 
+            console.log( 'Im a part fetch', {parts: responseJSON})
+            dispatch({type: 'FETCHING_PARTS', payload: responseJSON}) 
         })
     }
 }
@@ -19,7 +18,7 @@ export const fetchParts = () => {
 
 
 
-// let array(5) = { 
+// array(5) = { 
 //     ["NIIN"]=> string(2) "42",
 //     ["NAME"]=> string(18) "CK FILTER ASSEMBLY",
 //     ["INC"]=> string(5) "gh77777",

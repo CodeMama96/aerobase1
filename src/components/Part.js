@@ -4,20 +4,20 @@
 //aerobasegroup.`nsn_flis_parts`, 
 //aerobasegroup.`nsn_characteristics`
 
-const Part = props =>{
-   
+
+
+function Part({part}){
+
     return(
         <div className="part" >
-            name={props.name}
-            niin={props.niin}
-            inc={props.inc}
-            fsc={props.fsc}
-            publication_date={props.publication_date}
+        Hello I'm a part
+            <p>name= {`${part.name}`}</p>
+            <p>niin= {`${part.niin}`} </p>
+            <p>inc= {`${part.inc}`} </p>
+            <p>fsc= {`${part.fsc}`} </p>
+            <p>publication_date= {`${part.publication_date}`} </p>
         </div>
     )
 }
-
-//data is not being passed down??
-
 
 export default Part

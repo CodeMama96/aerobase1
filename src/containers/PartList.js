@@ -6,21 +6,20 @@ class PartList extends Component{
 
 
     renderPartList(){
-        let displayedParts = this.props.parts 
-            return displayedParts.map( part =>
-                <Part
-                    name={part.name}
-                    niin={part.niin}
-                    inc={part.inc}
-                    fsc={part.fsc}
-                    publication_date={part.publication_date}
-                    />)
+        let displayedParts = this.props.parts
+            return displayedParts.map( (part, index) =>
+             
+                <Part key={index} part={part}
+
+                />
+            )
     }
 
     render(){
+       console.log(this.props.parts)
         return(
             <div className="part-container">
-                 <Part/>
+                 {this.renderPartList()}
             </div>
         )
     }

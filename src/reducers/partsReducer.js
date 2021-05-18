@@ -1,11 +1,14 @@
 const partsReducer = (state = {parts: []}, action) => {
+    
     switch(action.type){
+        
         case "FETCHING_PARTS":
+            console.log(action.payload)
             return{
                 ...state,
-                parts:[...state.parts]
-                
+                parts: [...action.payload] //for refreshing
             }
+
             default:
                 return state;
     }

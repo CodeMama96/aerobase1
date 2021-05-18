@@ -1,14 +1,9 @@
 import './App.css'
 import SearchBar from './components/SearchBar'
-
-
-
 import PartList from './containers/PartList'
-
 import {fetchParts} from './actions/partActions'
 import { Component } from 'react';
 import { connect } from 'react-redux';
-
 
 
 class App extends Component {
@@ -28,7 +23,8 @@ class App extends Component {
                   <h1><i>Hay! Open for Business</i></h1>
                     <SearchBar/>
                     
-                    <PartList parts={this.props.parts}/>
+                    <PartList parts= {this.props.parts}/>
+                    
               </header>
           
         </div>
@@ -37,16 +33,19 @@ class App extends Component {
 }
 
 const mapDispatchToProps = dispatch => {
+  // debugger;
   return {
     fetchParts: () => dispatch(fetchParts())
   }
 }
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
+  // debugger;
 
-  return{
+  return({
+    
     parts: state.parts
-  }
+  })
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
