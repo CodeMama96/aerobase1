@@ -10,7 +10,6 @@ function Part({part}){
 
     return(
         <div className="part" >
-        Hello I'm a part
             <p>name= {`${part.name}`}</p>
             <p>niin= {`${part.niin}`} </p>
             <p>inc= {`${part.inc}`} </p>

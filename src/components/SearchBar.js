@@ -6,41 +6,28 @@ class SearchBar extends Component{
 
     state = {
         parts: [],
-        search: ''
+        input: ''
     }
 
     searchFunction = (e) => {
-        const name = e.target.name
-        const value = e.target.value
+        console.log("hi from onChange", e.target.value)
 
         this.setState({
-            [name]: value
-        }, () => console.log(this.state)
-        )
+            input: e.target.value
+        })
         console.log("Hello World!")
     }
-    
-//    search_part = () => {
-//         let input = document.getElementById('userInput').value
-//         input = input.toLowerCase();
-//         let x = document.getElementsByClassName('partName');
 
-         
-//         for (i = 0; i < x.length; i++) { 
-//             if (!x[i].innerHTML.toLowerCase().includes(input)) {
-//                 x[i].style.display="none";
-//             }
-//             else {
-//                 x[i].style.display="list-item";                 
-//             }
-//         }
-// }
+   
    
 
     render(){
+
+        // const filter = 
+        // this.state.parts.filter(part => {
+        //     return part.name.toLowerCase().includes(this.state.inputvalue.toLowerCase())
+        // })
        
-
-
         return(
             <div>
                 <form>
@@ -52,22 +39,9 @@ class SearchBar extends Component{
 
 
                 <a href="./FetchParts.php?name=<? print $_GET['name'] ?>">Click Me</a>
-                    <>
-                        <input type="text" id="userInput" placeholder="I'm a search bar" value={this.state.partNumber} name="search"  onChange={this.searchFunction}/>
-                            <ul id="byName">
-                                <li className="partName"><button>CK FILTER ASSEMBLY</button></li>
-                                <li className="partName"><button>TERMINAL BOARD ASSEMBLY</button></li>
+                    
+                        <input type="text" id="userInput" placeholder="I'm a search bar"  input={this.state.input} name="search"  onChange={this.searchFunction}/>
 
-                                <li className="partName"><button>MODIFICATION KIT,AIRFRAME</button></li>
-                                <li className="partName"><button>ENGINE,AIRCRAFT,TURBO-SHAFT</button></li>
-
-                                <li className="partName"><button>MODIFICATION KIT,ENGINE</button></li>
-                                <li className="partName"><button>COMPRESSOR UNIT,RECIPROCATING</button></li>
-                                <li className="partName"><button>ELECTRON TUBE</button></li>
-                            </ul>
-
-                            <script></script>
-                    </>
                 </form>
             </div>
         )

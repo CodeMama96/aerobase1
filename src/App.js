@@ -20,7 +20,7 @@ class App extends Component {
     return (
         <div className="App">
               <header className="App-header">
-                  <h1><i>Hay! Open for Business</i></h1>
+                  <h1><i>Part Searching...</i></h1>
                     <SearchBar/>
                     
                     <PartList parts= {this.props.parts}/>
