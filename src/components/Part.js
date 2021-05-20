@@ -10,11 +10,8 @@ function Part({part}){
 
     return(
         <div className="part" >
-            <p>name= {`${part.name}`}</p>
-            <p>niin= {`${part.niin}`} </p>
-            <p>inc= {`${part.inc}`} </p>
-            <p>fsc= {`${part.fsc}`} </p>
-            <p>publication_date= {`${part.publication_date}`} </p>
+            <p>NAME= {`${part.name}`} <br/>NIIN= {`${part.niin}`}<br/>INC= {`${part.inc}`}<br/>fsc= {`${part.fsc}`}<br/>PUBLICATION DATE= {`${part.publication_date}`} </p>
+            <br/>
         </div>
     )
 }

@@ -1,20 +1,35 @@
 .App {
   text-align: center;
+  /* background-color: white; */
+}
+.App-background{
+  background-image: url('./images/b2 aircraft.png');
+  background-repeat: no-repeat;
+  height: 600px;
+	margin: auto;
+  width: 100%;
+
+  background-size: auto;
+	
+	background-position: center; 
 }
 
 .App-header {
-  background-color: #c8dff7;
+  background-color: slategrey;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: darkblue;
+  color: white;
+  
+
 }
 
 .App-link {
-  color: #61dafb;
+  color: white
+  
 }
 
 #userInput {
@@ -34,7 +49,7 @@
   padding: 12px;
   text-decoration: none;
   font-size: 18px;
-  color: black;
+  color: white;
   display: block
 }
 

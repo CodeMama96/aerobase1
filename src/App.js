@@ -4,6 +4,7 @@ import PartList from './containers/PartList'
 import {fetchParts} from './actions/partActions'
 import { Component } from 'react';
 import { connect } from 'react-redux';
+// import './bootstrap.min.css'
 
 
 class App extends Component {
@@ -18,14 +19,18 @@ class App extends Component {
 
   render (){
     return (
-        <div className="App">
+        <div className="App" >
+        
               <header className="App-header">
-                  <h1><i>Part Searching...</i></h1>
-                    <SearchBar/>
-                    
-                    <PartList parts= {this.props.parts}/>
-                    
+              <div className="App-background"></div>
+                    <h1><i>Part Searching...</i></h1>
+                        <SearchBar/>
               </header>
+            
+                  
+                        
+                        <PartList parts= {this.props.parts}/>
+              
           
         </div>
     );

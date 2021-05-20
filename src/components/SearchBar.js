@@ -38,9 +38,9 @@ class SearchBar extends Component{
                 <link rel="stylesheet" type="text/javascript" href="http://194.195.210.84/var/www/html/index.php"></link>
 
 
-                <a href="./FetchParts.php?name=<? print $_GET['name'] ?>">Click Me</a>
+                <a href="./FetchParts.php?name=<? print $_GET['name'] ?>">Php FetchParts Link</a>
                     
-                        <input type="text" id="userInput" placeholder="I'm a search bar"  input={this.state.input} name="search"  onChange={this.searchFunction}/>
+                        <input type="text" id="userInput" placeholder="Search For Part"  input={this.state.input} name="search"  onChange={this.searchFunction}/>
 
                 </form>
             </div>
