@@ -1,5 +1,5 @@
 import './App.css'
-import SearchBar from './components/SearchBar'
+// import SearchBar from './components/SearchBar'
 import PartList from './containers/PartList'
 import {fetchParts} from './actions/partActions'
 import { Component } from 'react';
@@ -22,10 +22,12 @@ class App extends Component {
         <div className="App" >
         
               <header className="App-header">
+              
                   <div className="App-background"></div>
-                  <h3><i>Search For Parts</i></h3>
-                            <SearchBar/>
-                  <h1>AeroBase Group</h1>
+                      <h1>AeroBase Group</h1>
+                      <h3><i>Search For Parts</i></h3>
+                      
+                  
               </header>
             <PartList parts= {this.props.parts}/>
         </div>
