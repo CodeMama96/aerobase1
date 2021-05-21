@@ -22,15 +22,12 @@ class App extends Component {
         <div className="App" >
         
               <header className="App-header">
-              <div className="App-background"></div>
-              <h3><i>Search For Parts</i></h3>
-                        <SearchBar/>
-              <h1>AeroBase Group</h1>
-                    
+                  <div className="App-background"></div>
+                  <h3><i>Search For Parts</i></h3>
+                            <SearchBar/>
+                  <h1>AeroBase Group</h1>
               </header>
             <PartList parts= {this.props.parts}/>
-              
-          
         </div>
     );
   }

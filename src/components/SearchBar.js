@@ -6,8 +6,7 @@ class SearchBar extends Component{
 
     state = {
         parts: [],
-        search: "",
-        input: 'my input',
+        search: ""
 
     }
 

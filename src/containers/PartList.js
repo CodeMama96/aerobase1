@@ -12,12 +12,13 @@ class PartList extends Component{
 
     renderPartList(){
         let displayedParts = this.props.parts
-            return displayedParts.map( (part, index) =>
-             
-                <Part key={index} part={part}
 
-                />
-            )
+        if(this.state.search){
+            displayedParts = this.props.parts.filter((part) => part.name.toLowerCase().includes(this.state.search.toLowerCase()))
+        }
+
+        
+        return displayedParts.map( (part, index) => <Part key={index} part={part}/>)
     }
 
     handleInputChange = (e) => {
