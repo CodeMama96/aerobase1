@@ -15,6 +15,7 @@ class App extends Component {
 
   componentDidMount(){
     this.props.fetchParts()
+    //limit 15 parts at a time
   }
 
   render (){
@@ -46,7 +47,6 @@ const mapStateToProps = (state) => {
   // debugger;
 
   return({
-    
     parts: state.parts
   })
 }
@@ -58,4 +58,4 @@ export default connect(mapStateToProps, mapDispatchToProps)(App);
 //1. search bar on each page(nav bar?)
 //2. container for the parts
 //3. each part description
-//4. 
+//4. 15 parts at a time, refresh page, new parts will come up

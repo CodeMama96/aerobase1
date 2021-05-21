@@ -9,9 +9,9 @@ class PartList extends Component{
     }
 
 
-
+//combined search bar into PartList to make code more readable
     renderPartList(){
-        let displayedParts = this.props.parts
+        let displayedParts = this.props.parts.slice(0, 15) //will only show 15/ 24 parts at a time
 
         if(this.state.search){
             displayedParts = this.props.parts.filter(
@@ -19,6 +19,7 @@ class PartList extends Component{
                 || part.fsc.includes(this.state.search) || part.publication_date.includes(this.state.search) || part.inc.includes(this.state.search)
             )
         }
+        //search method by each category, name, fsc, inc, etc
         return displayedParts.map( (part, index) => <Part key={index} part={part}/>)
     }
 
