@@ -6,32 +6,39 @@ class SearchBar extends Component{
 
     state = {
         parts: [],
-        input: ''
+        search: "",
+        input: 'my input',
+
     }
 
-    searchFunction = (e) => {
-        console.log("hi from onChange", e.target.value)
 
-        this.setState({
-            input: e.target.value
-        })
-        console.log("Hello World!")
+    handleInputChange = (e) => {
+        console.log(e.target.value)
+        const search = e.target.value
+        this.setState({search: search})
     }
 
    
-   
+//    componentDidMount(){
+//        const url ="http://194.195.210.84/"
+
+//        fetch(url)
+//        .then(res=> res.json())
+//        .then(json =>{
+//            console.log(json)
+//            this.setState({parts: json
+//          }, ()=> console.log(this.state)) //console log to check setState so multiples do not fire off
+//        })
+//    }
+//getting CORS issue, from origin http://localhost:3001?
 
     render(){
 
-        // const filter = 
-        // this.state.parts.filter(part => {
-        //     return part.name.toLowerCase().includes(this.state.inputvalue.toLowerCase())
-        // })
        
         return(
             <div>
                 <form>
-                <script type="text/javascript" src="http://194.195.210.84/" method='POST'>
+                {/* <script type="text/javascript" src="http://194.195.210.84/" method='POST'>
                 </script>
 
 
@@ -39,10 +46,11 @@ class SearchBar extends Component{
 
 
                 <a href="./FetchParts.php?name=<? print $_GET['name'] ?>">Php FetchParts Link</a>
-                    
-                        <input type="text" id="userInput" placeholder="Search For Part"  input={this.state.input} name="search"  onChange={this.searchFunction}/>
+                     */}
+                        {/* <input type="text" id="userInput" placeholder="Search For Part" onChange={this.handleInputChange}/> */}
 
                 </form>
+          
             </div>
         )
     }
