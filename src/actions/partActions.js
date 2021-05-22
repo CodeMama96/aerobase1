@@ -1,4 +1,4 @@
-const url = 'http://localhost:3000/parts'
+const url = 'http://localhost:3000/parts?amount=15'
 
 export const fetchParts = () => {
     
@@ -8,11 +8,13 @@ export const fetchParts = () => {
             return response.json()
         }).then(responseJSON => {
             console.log( 'Im a part fetch', {parts: responseJSON})
-            dispatch({type: 'FETCHING_PARTS', payload: responseJSON}) 
+            dispatch({type: 'FETCHING_PARTS', payload: responseJSON})
         })
     }
 }
 
+
+//pagenation, page 1, page 2 etc
 
 //I basically want this to return array(5)
 

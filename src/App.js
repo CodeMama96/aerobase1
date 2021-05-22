@@ -4,7 +4,14 @@ import PartList from './containers/PartList'
 import {fetchParts} from './actions/partActions'
 import { Component } from 'react';
 import { connect } from 'react-redux';
+
 // import './bootstrap.min.css'
+
+// import{
+//   BrowserRouter as Router,
+//   //Switch,
+//  //Route
+// } from 'react-router-dom';
 
 
 class App extends Component {
@@ -14,23 +21,33 @@ class App extends Component {
   }
 
   componentDidMount(){
+   
     this.props.fetchParts()
+    // window.location.reload(e);
     //limit 15 parts at a time
+  }
+  
+
+  handleNewArray(){
+    //create a new array nondestructively of new elements
   }
 
   render (){
     return (
         <div className="App" >
-        
-              <header className="App-header">
+     
+                <header className="App-header">
               
                   <div className="App-background"></div>
                       <h1>AeroBase Group</h1>
                       <h3><i>Search For Parts</i></h3>
                       
                   
-              </header>
-            <PartList parts= {this.props.parts}/>
+                </header>
+           
+              <PartList parts= {this.props.parts}/>
+            
+         
         </div>
     );
   }
@@ -45,7 +62,6 @@ const mapDispatchToProps = dispatch => {
 
 const mapStateToProps = (state) => {
   // debugger;
-
   return({
     parts: state.parts
   })

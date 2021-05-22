@@ -1,3 +1,5 @@
+
+
 import React, {Component} from 'react';
 import Part from "../components/Part";
 
@@ -9,11 +11,13 @@ class PartList extends Component{
     }
 
 
+    
 //combined search bar into PartList to make code more readable
     renderPartList(){
-        let displayedParts = this.props.parts.slice(0, 15) //will only show 15/ 24 parts at a time
-
+       let displayedParts = this.props.parts.slice(0, 15) //will only show 15/ 24 parts at a time
+        //window.location.reload(false);
         if(this.state.search){
+            
             displayedParts = this.props.parts.filter(
                 (part) => part.name.toLowerCase().includes(this.state.search.toLowerCase()) || part.niin.includes(this.state.search) 
                 || part.fsc.includes(this.state.search) || part.publication_date.includes(this.state.search) || part.inc.includes(this.state.search)
