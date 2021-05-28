@@ -11,11 +11,13 @@ class PartList extends Component{
     }
 
 
-    
+   
 //combined search bar into PartList to make code more readable
     renderPartList(){
-       let displayedParts = this.props.parts.slice(0, 15) //will only show 15/ 24 parts at a time
+        
+       let displayedParts = this.props.parts//.slice(0, 15) //will only show 15/ 24 parts at a time
         //window.location.reload(false);
+ 
         if(this.state.search){
             
             displayedParts = this.props.parts.filter(
@@ -39,6 +41,7 @@ class PartList extends Component{
             <div className="part-container">
              <input type="text" id="userInput" placeholder="Search For Part" onChange={this.handleInputChange}/>
                  {this.renderPartList()}
+                 
             </div>
         )
     }

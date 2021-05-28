@@ -1,4 +1,4 @@
-const url = 'http://localhost:3000/parts?amount=15'
+const url = 'http://localhost:3000/parts?15'
 
 export const fetchParts = () => {
     
@@ -11,6 +11,12 @@ export const fetchParts = () => {
             dispatch({type: 'FETCHING_PARTS', payload: responseJSON})
         })
     }
+}
+
+
+export const fetchNewObjects = () => {
+    //if window.location.reload(true)
+    //fetch 
 }
 
 

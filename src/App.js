@@ -28,10 +28,6 @@ class App extends Component {
   }
   
 
-  handleNewArray(){
-    //create a new array nondestructively of new elements
-  }
-
   render (){
     return (
         <div className="App" >
@@ -44,7 +40,10 @@ class App extends Component {
                       
                   
                 </header>
-           
+                {/* <input type="button" value="Reload Page" onClick={this.handleReload}></input> */}
+  
+                {console.log(this.props.parts)}
+            
               <PartList parts= {this.props.parts}/>
             
          
